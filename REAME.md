@@ -5,7 +5,6 @@ this scritp allow backup sql mysql,postgres,sqlserver ability to rotate in there
 
 
 #Requeriments
-* pip install lib_sysblack
 * pip install hurry.filesize
 * pip install unipath
 
@@ -13,17 +12,17 @@ this scritp allow backup sql mysql,postgres,sqlserver ability to rotate in there
 
 ### Examples used
 
-#### mode test
+#### Mode test pending..
 ```
 $ python main.py -v -d -t
 ```
 
-#### mode basic
+#### Mode basic
 ```
 $ python main.py -v
 ```
 
-#### mode basic in windows with executable
+#### Mode basic in windows with executable
 ```:
 sql-backup-rotate.exe -v -d
 ```
@@ -37,12 +36,12 @@ sql-backup-rotate.exe -v -d
 ###Loging and debug
 
 ```
-$ python main.py -v -t -c sql_backup_rotate.cfg
-2018-08-06 09:47:19,900 INFO: Cargado archivo de configuracion: sql_backup_rotate.cfg.dev
-2018-08-06 09:47:19,900 INFO: Comando Generado: mysqldump --user=myuser --password=mypassword --single-transaction --skip-opt --add-drop-table --add-locks --create-options --disable-keys --extended-insert --quick --set-charset --databases nodejs | gzip > /tmp/testing/data_sql_2018-08-06--09-47-19.gz
-2018-08-06 09:47:19,901 INFO: Ejecutando comando...
-2018-08-06 09:47:19,958 INFO: Comando ejecutado exitosamente.
-2018-08-06 09:47:19,958 INFO: Rotando backups.
-2018-08-06 09:47:19,961 INFO: Script Completado.
-
-```
+$ python main.py -d -v -c sql_backup_rotate.cfg.dev
+2019-09-23 11:33:07,960 DEBUG: enable mode debuging...
+2019-09-23 11:33:07,961 INFO: load file config: sql_backup_rotate.cfg
+2019-09-23 11:33:07,961 INFO: executing command...
+2019-09-23 11:33:08,399 INFO: executed command ok.
+2019-09-23 11:33:08,399 INFO: rotations folders backups.
+2019-09-23 11:33:08,400 INFO: not executed command unmount.
+2019-09-23 11:33:08,400 INFO: Script teminated.
+ ```
