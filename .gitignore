@@ -1,0 +1,6 @@
+*private*
+*.log
+*.dev
+*.log
+*.spec
+*.pyc
